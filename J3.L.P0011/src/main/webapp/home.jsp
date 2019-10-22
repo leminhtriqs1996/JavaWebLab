@@ -197,25 +197,9 @@ head.appendChild(link);
     <div class="container">
         <div class="footer-info">
                 <div class="footer-info-text">
-                    This website was created with SimpleSite
-                </div>
-                            <div class="footer-powered-by">
-                    <a rel="nofollow" href="http://www.simplesite.com/pages/receive.aspx?partnerkey=123i%3afooterbanner&amp;referercustomerid=15831371&amp;refererpageid=422328564">Get Your own FREE website. Click here!</a>
+                    Traffic Visit :  ${applicationScope.counter.count}
                 </div>
         </div>
-            <div class="footer-page-counter" style="display: block;">
-	<span class="footer-page-counter-item">0</span>
-
-	<span class="footer-page-counter-item">0</span>
-
-	<span class="footer-page-counter-item">6</span>
-
-	<span class="footer-page-counter-item">7</span>
-
-	<span class="footer-page-counter-item">6</span>
-
-	<span class="footer-page-counter-item">0</span>
-</div>
         <div id="css_simplesite_com_fallback" class="hide"></div>
     </div>
 </div>
