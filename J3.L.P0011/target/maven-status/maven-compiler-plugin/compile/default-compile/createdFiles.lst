@@ -1,0 +1,6 @@
+dao\ArticleDAO.class
+dao\DBConnect.class
+com\mycompany\j3\l\p0011\controller\HomepageServlet.class
+dao\ArticleDAOImpl.class
+model\Article.class
+model\Menu.class
