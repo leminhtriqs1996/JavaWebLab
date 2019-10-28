@@ -11,10 +11,8 @@ public class DBConnect {
     public static Connection getDBConnection() throws ClassNotFoundException {
         Connection dbConnection = null;
         try {
-//            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-//            dbConnection = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=ONLINESHOP", "sa", "123");
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
-            dbConnection = DriverManager.getConnection("jdbc:jtds:sqlserver://TRI-PC:1433/J3.L.P0011", "sa", "root");
+            dbConnection = DriverManager.getConnection("jdbc:jtds:sqlserver://DESKTOP-KUPK67O:1433/J3.L.P0013", "sa", "root");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

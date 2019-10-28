@@ -94,11 +94,11 @@
             <div class="nav-collapse collapse">
                 <ul class="nav" id="topMenu" data-submenu="horizontal">
 <li class="  " style="">
-    <a href="http://us-123sushi.simplesite.com/410907962">Home</a>
+    <a href="Home.jsp">Home</a>
 </li><li class="  " style="">
-    <a href="http://us-123sushi.simplesite.com/410908035">Menu and Price list</a>
+    <a href="Menu.jsp">Menu and Price list</a>
 </li><li class=" active " style="">
-    <a href="http://us-123sushi.simplesite.com/410908165">Find us</a>
+    <a href="FindUs.jsp">Find us</a>
 </li>                </ul>
             </div>
         </div>
@@ -209,21 +209,11 @@
     <div class="container">
         <div class="footer-info">
                             <div class="footer-powered-by">
-                    <a href="http://www.simplesite.com/pages/receive.aspx?partnerkey=123i%3afooterbanner&amp;referercustomerid=10674955&amp;refererpageid=410908165">Created with SimpleSite</a>
+                    Traffic Visit :  ${applicationScope.counter.count}
                 </div>
         </div>
             <div class="footer-page-counter" style="display: block;">
-	<span class="footer-page-counter-item">0</span>
-
-	<span class="footer-page-counter-item">3</span>
-
-	<span class="footer-page-counter-item">4</span>
-
-	<span class="footer-page-counter-item">6</span>
-
-	<span class="footer-page-counter-item">2</span>
-
-	<span class="footer-page-counter-item">5</span>
+	
 </div>
         <div id="css_simplesite_com_fallback" class="hide"></div>
     </div>

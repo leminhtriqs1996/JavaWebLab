@@ -4,8 +4,10 @@
     Author     : tri
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<jsp:useBean id="sushi" class="dao.SushiDAOImpl"/>
 
 <!-- saved from url=(0034)http://us-123sushi.simplesite.com/ -->
 <html lang="en-US" class="gr__us-123sushi_simplesite_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./Home_files/analytics.js"></script><script id="facebook-jssdk" src="./Home_files/sdk.js"></script><script async="" src="./Home_files/gtm.js"></script><script type="text/javascript" async="" src="./Home_files/recaptcha__en.js"></script><script type="text/javascript">
@@ -92,11 +94,11 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
             <div class="nav-collapse collapse">
                 <ul class="nav" id="topMenu" data-submenu="horizontal">
 <li class=" active " style="">
-    <a href="http://us-123sushi.simplesite.com/410907962">Home</a>
+    <a href="Home.jsp">Home</a>
 </li><li class="  " style="">
-    <a href="http://us-123sushi.simplesite.com/410908035">Menu and Price list</a>
+    <a href="Menu.jsp">Menu and Price list</a>
 </li><li class="  " style="">
-    <a href="http://us-123sushi.simplesite.com/410908165">Find us</a>
+    <a href="FindUs.jsp">Find us</a>
 </li>                </ul>
             </div>
         </div>
@@ -137,9 +139,11 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
             <a data-ss="imagemodal" data-href="//cdn.simplesite.com/i/eb/15/282319406464701931/i282319414620340695._szw1280h1280_.jpg" rel="group"><img src="./Home_files/i282319414620340695._szw480h1280_.jpg"></a>
     </div>
     </div>
-<p><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
- ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
- duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</span></p>    </div>
+        <p><span>
+                <c:forEach  var="s" items="${sushi.list}">
+                    ${s.name}
+                </c:forEach>
+            </span></p>    </div>
 </div>
     </div>
 
@@ -176,21 +180,11 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
     <div class="container">
         <div class="footer-info">
                             <div class="footer-powered-by">
-                    <a href="http://www.simplesite.com/pages/receive.aspx?partnerkey=123i%3afooterbanner&amp;referercustomerid=10674955&amp;refererpageid=410907962">Created with SimpleSite</a>
+                    Traffic Visit :  ${applicationScope.counter.count}
                 </div>
         </div>
             <div class="footer-page-counter" style="display: block;">
-	<span class="footer-page-counter-item">0</span>
-
-	<span class="footer-page-counter-item">3</span>
-
-	<span class="footer-page-counter-item">4</span>
-
-	<span class="footer-page-counter-item">6</span>
-
-	<span class="footer-page-counter-item">2</span>
-
-	<span class="footer-page-counter-item">5</span>
+	}
 </div>
         <div id="css_simplesite_com_fallback" class="hide"></div>
     </div>
