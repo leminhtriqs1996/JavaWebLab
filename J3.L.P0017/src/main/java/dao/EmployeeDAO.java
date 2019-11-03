@@ -6,12 +6,12 @@
 package dao;
 
 import java.util.ArrayList;
-import model.Product;
+import model.Employee;
 
 /**
  *
  * @author aaa
  */
-interface ProductDAO {
-    public ArrayList<Product> getList();
+public interface EmployeeDAO {
+    public ArrayList<Employee> getListEmployee();
 }

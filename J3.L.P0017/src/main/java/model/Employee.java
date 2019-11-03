@@ -9,17 +9,19 @@ package model;
  *
  * @author aaa
  */
-public class Product {
+public class Employee {
     private int id;
     private String name;
-    private String description;
     private String image;
+    private String role;
+    private String description;
 
-    public Product(int id, String name, String description, String image) {
+    public Employee(int id, String name, String image, String role, String description) {
         this.id = id;
         this.name = name;
-        this.description = description;
         this.image = image;
+        this.role = role;
+        this.description = description;
     }
 
     public int getId() {
@@ -38,14 +40,6 @@ public class Product {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getImage() {
         return image;
     }
@@ -53,9 +47,22 @@ public class Product {
     public void setImage(String image) {
         this.image = image;
     }
-    
-    
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
     
     
 }

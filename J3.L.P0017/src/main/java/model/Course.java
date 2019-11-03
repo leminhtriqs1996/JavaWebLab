@@ -5,23 +5,31 @@
  */
 package model;
 
+import java.util.Date;
+
+
+
 /**
  *
  * @author aaa
  */
-public class Product {
+public class Course {
     private int id;
     private String name;
     private String description;
-    private String image;
+    private double price;
+    private Date date;
 
-    public Product(int id, String name, String description, String image) {
+    public Course(int id, String name, String description, double price, Date date) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.image = image;
+        this.price = price;
+        this.date = date;
     }
 
+    
+    
     public int getId() {
         return id;
     }
@@ -46,16 +54,21 @@ public class Product {
         this.description = description;
     }
 
-    public String getImage() {
-        return image;
+    public double getPrice() {
+        return price;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setPrice(double price) {
+        this.price = price;
     }
-    
-    
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
     
     
 }

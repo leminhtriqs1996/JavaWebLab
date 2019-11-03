@@ -4,12 +4,14 @@
     Author     : aaa
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean id="articleDAO" class="dao.ArticleDAOImpl"/>
 <!DOCTYPE html>
 <!DOCTYPE html>
 <!-- saved from url=(0045)http://us-123fashion.simplesite.com/410906719 -->
 <html lang="en-US" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>My Fashion Blog - us-123fashion.simplesite.com</title>
+        <title>My Fashion Blog </title>
 <meta property="og:site_name" content="My Fashion Blog">
 <meta property="article:publisher" content="https://www.facebook.com/simplesite">
 <meta property="og:locale" content="en-US">
@@ -87,11 +89,11 @@ head.appendChild(link);
             <div class="nav-collapse collapse">
                 <ul class="nav" id="topMenu" data-submenu="horizontal">
 <li class=" active " style="">
-    <a rel="nofollow" href="http://us-123fashion.simplesite.com/410906719">My Fashion Blog</a>
+    <a rel="nofollow" href="Home.jsp">My Fashion Blog</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://us-123fashion.simplesite.com/410906237">About me</a>
+    <a rel="nofollow" href="About_me.jsp">About me</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://us-123fashion.simplesite.com/410906953">Contact</a>
+    <a rel="nofollow" href="Contact.jsp">Contact</a>
 </li>                </ul>
             </div>
         </div>
@@ -111,26 +113,27 @@ head.appendChild(link);
     </div>
 
 <div class="content">
-    <div class="section">
+    <c:forEach var="a" items="${articleDAO.listArticleSortByDate}">
+        <div class="section">
         <div class="content">
             <div class="avatar">
                 <i class="icon-camera-retro icon-4x" title="In New York"></i>
             </div>
             <div class="item">
                 <div class="controls">
-    <span class="date-text">17-08-2014</span>
+    <span class="date-text"> ${a.published_date} </span>
 </div>
 <div class="heading">
-        <h4><a rel="nofollow" href="http://us-123fashion.simplesite.com/410906719/2122879/posting/in-new-york">In New York</a></h4>
+        <h4><a rel="nofollow" href="View?id=${a.id}"> ${a.title} </a></h4>
 </div>
 
 <div class="content">
     <div class="img-simple  ">
     <div class="image">
-            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/25/d7/284852684260562725/i284852689410723512._szw1280h1280_.jpg" title="Claritas est etiam processus dynamicus, qui sequitur"><img src="./home_files/i284852689410723512._szw1280h1280_.jpg"></a>
+            <a rel="nofollow" data-ss="imagemodal" data-href="./home_files/${a.image}" title="Claritas est etiam processus dynamicus, qui sequitur"><img src="./home_files/${a.image}"></a>
     </div>
         <div class="image-caption">
-        <p class="sub2">Claritas est etiam processus dynamicus, qui sequitur</p>
+        <p class="sub2"> ${a.content}</p>
     </div> 
 </div>
 
@@ -140,96 +143,10 @@ head.appendChild(link);
             </div>
         </div>
     </div>
-    <div class="section">
-        <div class="content">
-            <div class="avatar">
-                <i class="icon-pencil icon-4x" title="In New York"></i>
-            </div>
-            <div class="item">
-                <div class="controls">
-    <span class="date-text">17-08-2014</span>
-</div>
-<div class="heading">
-        <h4><a rel="nofollow" href="http://us-123fashion.simplesite.com/410906719/2122872/posting/in-new-york">In New York</a></h4>
-</div>
-
-<div class="content">
-    <div class="img-simple span6 pull-left">
-    <div class="image">
-            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/25/d7/284852684260562725/i284852689410723418._szw1280h1280_.jpg"><img src="./home_files/i284852689410723418._szw480h1280_.jpg"></a>
-    </div>
-    </div>
-
-    <p><span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
- ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
- duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes
- demonstraverunt lectores legere me lius quod ii legunt saepius.</span></p>
-</div>
-
-
-            </div>
-        </div>
-    </div>
-    <div class="section">
-        <div class="content">
-            <div class="avatar">
-                <i class="icon-camera-retro icon-4x" title="Awesome Gucci"></i>
-            </div>
-            <div class="item">
-                <div class="controls">
-    <span class="date-text">17-08-2014</span>
-</div>
-<div class="heading">
-        <h4><a rel="nofollow" href="http://us-123fashion.simplesite.com/410906719/2122855/posting/awesome-gucci">Awesome Gucci</a></h4>
-</div>
-
-<div class="content">
-    <div class="img-simple  ">
-    <div class="image">
-            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/25/d7/284852684260562725/i284852689410723250._szw1280h1280_.jpg" title="Claritas est etiam processus dynamicus, qui sequitur"><img src="./home_files/i284852689410723250._szw1280h1280_.jpg"></a>
-    </div>
-        <div class="image-caption">
-        <p class="sub2">Claritas est etiam processus dynamicus, qui sequitur</p>
-    </div> 
-</div>
-
-</div>
+    </c:forEach>
     
-
-            </div>
-        </div>
-    </div>
-    <div class="section">
-        <div class="content">
-            <div class="avatar">
-                <i class="icon-camera-retro icon-4x" title="Special Offer"></i>
-            </div>
-            <div class="item">
-                <div class="controls">
-    <span class="date-text">17-08-2014</span>
-</div>
-<div class="heading">
-        <h4><a rel="nofollow" href="http://us-123fashion.simplesite.com/410906719/2122859/posting/special-offer">Special Offer</a></h4>
-</div>
-
-<div class="content">
-    <div class="img-simple  ">
-    <div class="image">
-            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/25/d7/284852684260562725/i284852689410723270._szw1280h1280_.jpg" title="Claritas est etiam processus dynamicus, qui sequitur"><img src="./home_files/i284852689410723270._szw1280h1280_.jpg"></a>
-    </div>
-        <div class="image-caption">
-        <p class="sub2">Claritas est etiam processus dynamicus, qui sequitur</p>
-    </div> 
-</div>
-
-</div>
-    
-
-            </div>
-        </div>
-    </div>
             <ul class="pager">
-                <li><a rel="nofollow" href="http://us-123fashion.simplesite.com/410906719?overview=1">Overview</a></li>
+                <li><a rel="nofollow" href="Over_view.jsp">Overview</a></li>
             </ul>
 </div>
 
@@ -263,21 +180,10 @@ head.appendChild(link);
     <div class="container">
         <div class="footer-info">
                             <div class="footer-powered-by">
-                    <a rel="nofollow" href="http://www.simplesite.com/pages/receive.aspx?partnerkey=123i%3afooterbanner&amp;referercustomerid=10674181&amp;refererpageid=410906719">Created with SimpleSite</a>
+                    Traffic Visit :  ${applicationScope.counter.count}
                 </div>
         </div>
             <div class="footer-page-counter" style="display: block;">
-	<span class="footer-page-counter-item">0</span>
-
-	<span class="footer-page-counter-item">5</span>
-
-	<span class="footer-page-counter-item">7</span>
-
-	<span class="footer-page-counter-item">3</span>
-
-	<span class="footer-page-counter-item">6</span>
-
-	<span class="footer-page-counter-item">8</span>
 </div>
         <div id="css_simplesite_com_fallback" class="hide"></div>
     </div>

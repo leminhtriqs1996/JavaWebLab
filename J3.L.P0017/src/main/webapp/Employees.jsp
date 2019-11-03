@@ -4,7 +4,9 @@
     Author     : aaa
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean id="employeeDAO" class="dao.EmployeeDAOImpl"/>
 <!DOCTYPE html>
 <!DOCTYPE html>
 <!-- saved from url=(0048)http://www.simplesite.com/us-123health/118896512 -->
@@ -87,16 +89,16 @@ head.appendChild(link);
             <!-- Everything you want hidden at 940px or less, place within here -->
             <div class="nav-collapse collapse">
                 <ul class="nav" id="topMenu" data-submenu="horizontal">
-<li class="  " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896506">Welcome</a>
+<li class=" active " style="">
+    <a rel="nofollow" href="Welcome.jsp">Welcome</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896508">Therapy and Massage</a>
+    <a rel="nofollow" href="Therapy_and_Massage.jsp">Therapy and Massage</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896511">Price List</a>
-</li><li class=" active " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896512">Employees</a>
+    <a rel="nofollow" href="PriceList.jsp">Price List</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896510">Contact us</a>
+    <a rel="nofollow" href="Employees.jsp">Employees</a>
+</li><li class="  " style="">
+    <a rel="nofollow" href="ContactUs.jsp">Contact us</a>
 </li>                </ul>
             </div>
         </div>
@@ -112,43 +114,27 @@ head.appendChild(link);
             <div id="left" class="span9"> <!-- ADD "span12" if no sidebar, or "span9" with sidebar -->
                 <div class="wrapper ">
                     <div class="content">
-<div class="section article">
+                        <c:forEach var="e" items="${employeeDAO.listEmployee}">
+                            <div class="section article">
     <style>    .wordwrapfix {
         word-wrap:break-word;
     }
 </style>
 <div class="heading wordwrapfix">
-        <h3>Charlotte Robert</h3>
+        <h3> ${e.name} </h3>
 </div>
 
     <div class="content">
 <div class="img-simple span3 pull-left">
     <div class="image">
-            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/ef/3d/283445307041725935/i283445314494044460._szw1280h1280_.jpg"><img src="./Employees_files/i283445314494044460._szw480h1280_.jpg"></a>
+            <a rel="nofollow" data-ss="imagemodal" data-href="./Employees_files/${e.image}"><img src="./Employees_files/${e.image}"></a>
     </div>
     </div>
-<p><span style="font-size: 16px;">Masseur and sports masseur<br>(Medical and physiotherapist examined)<strong><br></strong></span></p> <p><span style="font-size: 16px;" data-mce-mark="1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
- diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</span></p>    </div>
+<p><span style="font-size: 16px;"> ${e.role} </span></p> <p><span style="font-size: 16px;" data-mce-mark="1"> ${e.description}</span></p>    </div>
 </div>
-<div class="section article">
-    <style>    .wordwrapfix {
-        word-wrap:break-word;
-    }
-</style>
-<div class="heading wordwrapfix">
-        <h3>Louise Richard</h3>
-</div>
+    </div>
+                        </c:forEach>
 
-    <div class="content">
-<div class="img-simple span3 pull-left">
-    <div class="image">
-            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/ef/3d/283445307041725935/i283445314494044470._szw1280h1280_.jpg"><img src="./Employees_files/i283445314494044470._szw480h1280_.jpg"></a>
-    </div>
-    </div>
-<p><span style="font-size: 16px;">Aroma therapist<strong><br></strong></span></p> <p><span style="font-size: 16px;" data-mce-mark="1"><span data-mce-mark="1">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
- est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.</span></span></p>    </div>
-</div>
-    </div>
 
                 
                 </div>
@@ -180,21 +166,10 @@ head.appendChild(link);
     <div class="container">
         <div class="footer-info">
                             <div class="footer-powered-by">
-                    <a rel="nofollow" href="http://www.simplesite.com/pages/receive.aspx?partnerkey=123i%3afooterbanner&amp;referercustomerid=3016847&amp;refererpageid=118896512">Created with SimpleSite</a>
+                    Traffic Visit :  ${applicationScope.counter.count}
                 </div>
         </div>
             <div class="footer-page-counter" style="display: block;">
-	<span class="footer-page-counter-item">0</span>
-
-	<span class="footer-page-counter-item">4</span>
-
-	<span class="footer-page-counter-item">1</span>
-
-	<span class="footer-page-counter-item">1</span>
-
-	<span class="footer-page-counter-item">9</span>
-
-	<span class="footer-page-counter-item">9</span>
 </div>
         <div id="css_simplesite_com_fallback" class="hide"></div>
     </div>

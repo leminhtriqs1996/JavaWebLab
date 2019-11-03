@@ -87,12 +87,12 @@ head.appendChild(link);
             <!-- Everything you want hidden at 940px or less, place within here -->
             <div class="nav-collapse collapse">
                 <ul class="nav" id="topMenu" data-submenu="horizontal">
-<li class="  " style="">
-    <a rel="nofollow" href="http://us-123fashion.simplesite.com/410906719">My Fashion Blog</a>
-</li><li class=" active " style="">
-    <a rel="nofollow" href="http://us-123fashion.simplesite.com/410906237">About me</a>
+<li class=" active " style="">
+    <a rel="nofollow" href="Home.jsp">My Fashion Blog</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://us-123fashion.simplesite.com/410906953">Contact</a>
+    <a rel="nofollow" href="About_me.jsp">About me</a>
+</li><li class="  " style="">
+    <a rel="nofollow" href="Contact.jsp">Contact</a>
 </li>                </ul>
             </div>
         </div>
@@ -159,21 +159,10 @@ head.appendChild(link);
     <div class="container">
         <div class="footer-info">
                             <div class="footer-powered-by">
-                    <a rel="nofollow" href="http://www.simplesite.com/pages/receive.aspx?partnerkey=123i%3afooterbanner&amp;referercustomerid=10674181&amp;refererpageid=410906237">Created with SimpleSite</a>
+                    Traffic Visit :  ${applicationScope.counter.count}
                 </div>
         </div>
             <div class="footer-page-counter" style="display: block;">
-	<span class="footer-page-counter-item">0</span>
-
-	<span class="footer-page-counter-item">5</span>
-
-	<span class="footer-page-counter-item">7</span>
-
-	<span class="footer-page-counter-item">3</span>
-
-	<span class="footer-page-counter-item">6</span>
-
-	<span class="footer-page-counter-item">8</span>
 </div>
         <div id="css_simplesite_com_fallback" class="hide"></div>
     </div>

@@ -12,7 +12,7 @@ public class DBConnect {
         Connection dbConnection = null;
         try {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
-            dbConnection = DriverManager.getConnection("jdbc:jtds:sqlserver://DESKTOP-KUPK67O:1433/J3.L.P0015", "sa", "root");
+            dbConnection = DriverManager.getConnection("jdbc:jtds:sqlserver://DESKTOP-KUPK67O:1433/J3.L.P0018", "sa", "root");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

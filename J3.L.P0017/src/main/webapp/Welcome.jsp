@@ -4,22 +4,15 @@
     Author     : aaa
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean id="articleDAO" class="dao.ArticleDAOImpl"/>
+<jsp:useBean id="courseDAO" class="dao.CourseDAOImpl"/>
 <!DOCTYPE html>
 <!DOCTYPE html>
 <!-- saved from url=(0038)http://www.simplesite.com/us-123health -->
 <html lang="en-US" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome - www.simplesite.com/us-123health</title>
-<meta property="og:site_name" content="Aromatherapy - Massage">
-<meta property="article:publisher" content="https://www.facebook.com/simplesite">
-<meta property="og:locale" content="en-US">
-<meta property="og:url" content="http://www.simplesite.com/us-123health/">
-<meta property="og:title" content="Aromatherapy Means &quot;Treatment Using Scents&quot;">
-<meta property="og:description" content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. - Hot Stone Massage - A Var...">
-<meta property="og:image" content="http://cdn.simplesite.com/i/ef/3d/283445307041725935/i283445314524568867._szw1280h1280_.jpg">
-<meta property="og:updated_time" content="2017-01-04T04:31:20.7519500+00:00">
-<meta property="og:type" content="website">
-<meta name="robots" content="nofollow">
+        <title>Welcome </title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,7 +49,7 @@ head.appendChild(link);
     <div class="container">
 <div class="title-wrapper">
 	<div class="title-wrapper-inner">
-	    <a rel="nofollow" class="logo " href="http://www.simplesite.com/us-123health/">
+	    <a rel="nofollow" class="logo " href="Welcome.jsp">
 	    </a>
 	    <div class="title ">
 	        Aromatherapy - Massage
@@ -85,15 +78,15 @@ head.appendChild(link);
             <div class="nav-collapse collapse">
                 <ul class="nav" id="topMenu" data-submenu="horizontal">
 <li class=" active " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896506">Welcome</a>
+    <a rel="nofollow" href="Welcome.jsp">Welcome</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896508">Therapy and Massage</a>
+    <a rel="nofollow" href="Therapy_and_Massage.jsp">Therapy and Massage</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896511">Price List</a>
+    <a rel="nofollow" href="PriceList.jsp">Price List</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896512">Employees</a>
+    <a rel="nofollow" href="Employees.jsp">Employees</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896510">Contact us</a>
+    <a rel="nofollow" href="ContactUs.jsp">Contact us</a>
 </li>                </ul>
             </div>
         </div>
@@ -113,7 +106,7 @@ head.appendChild(link);
     <div class="content">
         <div class="img-simple span12 ">
     <div class="image">
-            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/ef/3d/283445307041725935/i283445314524568867._szw1280h1280_.jpg"><img src="./Welcome_files/i283445314524568867._szw1280h1280_.jpg"></a>
+            <a rel="nofollow" data-ss="imagemodal" data-href="./Welcome_files/i283445314524568867._szw1280h1280_.jpg"><img src="./Welcome_files/i283445314524568867._szw1280h1280_.jpg"></a>
     </div>
     </div>
 
@@ -122,45 +115,22 @@ head.appendChild(link);
 <div class="section">
     <div class="content">
         <ul class="thumbnails column-article-section">
+            <c:forEach begin="0" end="2" var="a" items="${articleDAO.listArticleSortByDate}">
                 <li class="span4">
                     <div class="img-simple span12 ">
     <div class="image">
-            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/ef/3d/283445307041725935/i283445314524568923._szw1280h1280_.jpg"><img src="./Welcome_files/i283445314524568923._rsw480h360_szw480h360_.jpg"></a>
+            <a rel="nofollow" data-ss="imagemodal" data-href="./image/${a.image}"><img src="./image/${a.image}"></a>
     </div>
     </div>
 
                     <h4>
-        <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896508">Aromatherapy Means "Treatment Using Scents"</a>
+        <a rel="nofollow" href="Therapy_and_Massage.jsp"> ${a.title} </a>
 </h4>
 
-                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                     <p> ${a.content} </p>
                 </li>
-                <li class="span4">
-                    <div class="img-simple span12 ">
-    <div class="image">
-            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/ef/3d/283445307041725935/i283445314491420783._szw1280h1280_.jpg"><img src="./Welcome_files/i283445314491420783._rsw480h360_szw480h360_.jpg"></a>
-    </div>
-    </div>
-
-                    <h4>
-        <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896508">Hot Stone Massage - A Variation On Classic Massage Therapy</a>
-</h4>
-
-                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>
-                </li>
-                <li class="span4">
-                    <div class="img-simple span12 ">
-    <div class="image">
-            <a rel="nofollow" data-ss="imagemodal" data-href="http://cdn.simplesite.com/i/ef/3d/283445307041725935/i283445314489630203._szw1280h1280_.jpg"><img src="./Welcome_files/i283445314489630203._rsw480h360_szw480h360_.jpg"></a>
-    </div>
-    </div>
-
-                    <h4>
-        <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896508">Massage - Effect On Both Body And Mind</a>
-</h4>
-
-                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                </li>
+            </c:forEach>
+                
         </ul>
     </div>
 </div>
@@ -175,20 +145,17 @@ head.appendChild(link);
 
     <div class="content">
         <dl class="dl-horizontal">
-            <dt><span class="date-text">Aug. 15, 2013</span></dt>
+            <c:forEach var="c" items="${courseDAO.listCourse}" >
+                <dt><span class="date-text"> </span> ${c.date} </dt>
             <dd>
                 <h4>
-Introductory Massage</h4>
+                    ${c.name}
+                </h4>
 
-                 <p>This subject is an excellent introduction to the basic concepts of massage including posture, draping, positioning, hygiene and hand techniques. It is a great way of helping you to decide on your dream career - it can really be an inspiration! Or, you may just want to learn something new to practice on family and friends!</p>
+                 <p> ${c.description}</p>
             </dd>
-            <dt><span class="date-text">Aug. 28, 2013</span></dt>
-            <dd>
-                <h4>
-Certificate Course</h4>
-
-                 <p>We use a unique flexible training system to maximise the value you get from your learning. As well as meeting all government guidelines, our training allows you to learn at your own pace by choosing part-time, full-time or correspondence</p>
-            </dd>
+            </c:forEach>
+            
         </dl>
     </div>
 </div>
@@ -252,21 +219,10 @@ Certificate Course</h4>
     <div class="container">
         <div class="footer-info">
                             <div class="footer-powered-by">
-                    <a rel="nofollow" href="http://www.simplesite.com/pages/receive.aspx?partnerkey=123i%3afooterbanner&amp;referercustomerid=3016847&amp;refererpageid=118896506">Created with SimpleSite</a>
+                    Traffic Visit :  ${applicationScope.counter.count}
                 </div>
         </div>
             <div class="footer-page-counter" style="display: block;">
-	<span class="footer-page-counter-item">0</span>
-
-	<span class="footer-page-counter-item">4</span>
-
-	<span class="footer-page-counter-item">1</span>
-
-	<span class="footer-page-counter-item">1</span>
-
-	<span class="footer-page-counter-item">9</span>
-
-	<span class="footer-page-counter-item">9</span>
 </div>
         <div id="css_simplesite_com_fallback" class="hide"></div>
     </div>

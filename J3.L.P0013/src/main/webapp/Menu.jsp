@@ -4,7 +4,9 @@
     Author     : tri
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean id="menu" class="dao.MenuDAOImpl"/>
 <!DOCTYPE html>
 
 <!-- saved from url=(0043)http://us-123sushi.simplesite.com/410908035 -->
@@ -110,63 +112,31 @@
     </div>
 
 <div class="content">
+    <c:forEach  var="m" items="${menu.list}">
         <div class="section">
         <div class="content">
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Menu 1</th>
+                        <th> ${m.id}</th>
                                                 <th class="align-right">Price</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Claritas est etiam processus</td>
-                                                <td class="align-right">€15.00</td>
+                        <td> ${m.name} </td>
+                                                <td class="align-right">${m.price}</td>
                     </tr>
                 </tbody>
             </table>
-             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+             <p> 
+                 <c:forEach  var="s" items="${m.listSushi}">
+                     ${s.name}
+                 </c:forEach>
+             </p>
         </div>
     </div>
-    <div class="section">
-        <div class="content">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Menu 2</th>
-                                                <th class="align-right">Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Duis autem vel eum iriure dolor.</td>
-                                                <td class="align-right">€20.00</td>
-                    </tr>
-                </tbody>
-            </table>
-             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-        </div>
-    </div>
-    <div class="section">
-        <div class="content">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Menu 3</th>
-                                                <th class="align-right">Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Eodem modo typi, qui nunc nobis videntur.</td>
-                                                <td class="align-right">€25.00</td>
-                    </tr>
-                </tbody>
-            </table>
-             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-        </div>
-    </div>
+    </c:forEach>
 </div>
 
                 

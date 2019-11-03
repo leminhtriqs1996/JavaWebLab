@@ -6,12 +6,23 @@
     </filter>
     <filter-mapping>
         <filter-name>CounterFilter</filter-name>
-        <url-pattern>/Home.jsp</url-pattern>
+        <url-pattern>/Welcome.jsp</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>CounterFilter</filter-name>
-        <url-pattern>/About_my_Cakes.jsp</url-pattern>
-        <url-pattern>/Find_Maria_s_Cafe.jsp</url-pattern>
+        <url-pattern>/Therapy_and_Massage.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CounterFilter</filter-name>
+        <url-pattern>/PriceList.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CounterFilter</filter-name>
+        <url-pattern>/ContactUs.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CounterFilter</filter-name>
+        <url-pattern>/Employees.jsp</url-pattern>
     </filter-mapping>
     <session-config>
         <session-timeout>
@@ -19,6 +30,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>Home.jsp</welcome-file>
+        <welcome-file>Welcome.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

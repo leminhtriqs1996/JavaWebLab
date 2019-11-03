@@ -5,35 +5,35 @@
  */
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
- * @author tri
+ * @author aaa
  */
-public class Menu {
-    private int id ;
+public class Service {
+    private int id;
     private String name;
-    private ArrayList<Sushi> listSushi;
     private double price;
+    private int time;
 
-    public Menu(int id, String name, ArrayList<Sushi> listSushi, double price) {
+    public Service(int id, String name, double price) {
         this.id = id;
         this.name = name;
-        this.listSushi = listSushi;
         this.price = price;
     }
 
-    public Menu(String name, ArrayList<Sushi> listSushi, double price) {
-        this.name = name;
-        this.listSushi = listSushi;
-        this.price = price;
-    }
-
-    public Menu(int id, String name) {
+    public Service(int id, String name, double price, int time) {
         this.id = id;
         this.name = name;
+        this.price = price;
+        this.time = time;
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
     }
 
     
@@ -54,14 +54,6 @@ public class Menu {
         this.name = name;
     }
 
-    public ArrayList<Sushi> getListSushi() {
-        return listSushi;
-    }
-
-    public void setListSushi(ArrayList<Sushi> listSushi) {
-        this.listSushi = listSushi;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -69,8 +61,6 @@ public class Menu {
     public void setPrice(double price) {
         this.price = price;
     }
-
-    
     
     
 }

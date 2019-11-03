@@ -6,13 +6,32 @@
     </filter>
     <filter-mapping>
         <filter-name>CounterFilter</filter-name>
+        <url-pattern>/Contact.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CounterFilter</filter-name>
+        <url-pattern>/About_me.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CounterFilter</filter-name>
         <url-pattern>/Home.jsp</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>CounterFilter</filter-name>
-        <url-pattern>/About_my_Cakes.jsp</url-pattern>
-        <url-pattern>/Find_Maria_s_Cafe.jsp</url-pattern>
+        <url-pattern>/detail.jsp</url-pattern>
     </filter-mapping>
+    <filter-mapping>
+        <filter-name>CounterFilter</filter-name>
+        <url-pattern>/Over_view.jsp</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>ViewServlet</servlet-name>
+        <servlet-class>controller.ViewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewServlet</servlet-name>
+        <url-pattern>/View</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

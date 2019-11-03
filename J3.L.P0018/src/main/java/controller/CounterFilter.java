@@ -47,7 +47,6 @@ public class CounterFilter implements Filter {
             c.setCount(c.getCount() +1 );
         }
         sc.setAttribute("counter", c);
-
         // Write code here to process the request and/or response before
         // the rest of the filter chain is invoked.
         // For example, a logging filter might log items on the request object,

@@ -82,16 +82,16 @@ head.appendChild(link);
             <!-- Everything you want hidden at 940px or less, place within here -->
             <div class="nav-collapse collapse">
                 <ul class="nav" id="topMenu" data-submenu="horizontal">
-<li class="  " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896506">Welcome</a>
+<li class=" active " style="">
+    <a rel="nofollow" href="Welcome.jsp">Welcome</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896508">Therapy and Massage</a>
+    <a rel="nofollow" href="Therapy_and_Massage.jsp">Therapy and Massage</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896511">Price List</a>
+    <a rel="nofollow" href="PriceList.jsp">Price List</a>
 </li><li class="  " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896512">Employees</a>
-</li><li class=" active " style="">
-    <a rel="nofollow" href="http://www.simplesite.com/us-123health/118896510">Contact us</a>
+    <a rel="nofollow" href="Employees.jsp">Employees</a>
+</li><li class="  " style="">
+    <a rel="nofollow" href="ContactUs.jsp">Contact us</a>
 </li>                </ul>
             </div>
         </div>
@@ -199,21 +199,10 @@ head.appendChild(link);
     <div class="container">
         <div class="footer-info">
                             <div class="footer-powered-by">
-                    <a rel="nofollow" href="http://www.simplesite.com/pages/receive.aspx?partnerkey=123i%3afooterbanner&amp;referercustomerid=3016847&amp;refererpageid=118896510">Created with SimpleSite</a>
+                    Traffic Visit :  ${applicationScope.counter.count}
                 </div>
         </div>
             <div class="footer-page-counter" style="display: block;">
-	<span class="footer-page-counter-item">0</span>
-
-	<span class="footer-page-counter-item">4</span>
-
-	<span class="footer-page-counter-item">1</span>
-
-	<span class="footer-page-counter-item">1</span>
-
-	<span class="footer-page-counter-item">9</span>
-
-	<span class="footer-page-counter-item">9</span>
 </div>
         <div id="css_simplesite_com_fallback" class="hide"></div>
     </div>

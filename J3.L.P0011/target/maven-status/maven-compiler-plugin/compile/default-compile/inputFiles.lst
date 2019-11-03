@@ -1,6 +1,10 @@
-D:\tai lieu\JavaWebLab\J3.L.P0011\src\main\java\model\Article.java
-D:\tai lieu\JavaWebLab\J3.L.P0011\src\main\java\dao\DBConnect.java
-D:\tai lieu\JavaWebLab\J3.L.P0011\src\main\java\com\mycompany\j3\l\p0011\controller\HomepageServlet.java
-D:\tai lieu\JavaWebLab\J3.L.P0011\src\main\java\dao\ArticleDAOImpl.java
-D:\tai lieu\JavaWebLab\J3.L.P0011\src\main\java\dao\ArticleDAO.java
-D:\tai lieu\JavaWebLab\J3.L.P0011\src\main\java\model\Menu.java
+G:\java project\JavaWebLab\J3.L.P0011\src\main\java\com\mycompany\j3\l\p0011\controller\CounterFilter.java
+G:\java project\JavaWebLab\J3.L.P0011\src\main\java\com\mycompany\j3\l\p0011\controller\ViewArticleServlet.java
+G:\java project\JavaWebLab\J3.L.P0011\src\main\java\com\mycompany\j3\l\p0011\controller\HomepageServlet.java
+G:\java project\JavaWebLab\J3.L.P0011\src\main\java\com\mycompany\j3\l\p0011\controller\OverviewServlet.java
+G:\java project\JavaWebLab\J3.L.P0011\src\main\java\dao\ArticleDAO.java
+G:\java project\JavaWebLab\J3.L.P0011\src\main\java\model\Article.java
+G:\java project\JavaWebLab\J3.L.P0011\src\main\java\dao\ArticleDAOImpl.java
+G:\java project\JavaWebLab\J3.L.P0011\src\main\java\model\Couter.java
+G:\java project\JavaWebLab\J3.L.P0011\src\main\java\dao\DBConnect.java
+G:\java project\JavaWebLab\J3.L.P0011\src\main\java\model\Menu.java
